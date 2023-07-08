@@ -78,9 +78,9 @@ html {
 	scroll-behavior: smooth;
   }
 
-  #getStarted {
+  /* #getStarted {
 	scroll-behavior: smooth;
-  }
+  } */
 
 	@-ms-viewport {
 		width: device-width;
