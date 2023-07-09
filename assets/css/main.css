@@ -73,8 +73,12 @@ input, select, textarea {
 }
 
 /* Basic */
+/* :focus-within */
+html {
+	scroll-behavior: smooth;
+  }
 
-html:focus-within, #getStarted {
+  #getStarted {
 	scroll-behavior: smooth;
   }
 
