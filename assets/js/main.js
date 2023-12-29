@@ -80,3 +80,133 @@
 				});
 
 })(jQuery);
+
+
+// POP UP TRIAL
+
+// Get the button and the pop-up elements
+// function openPopup1() {
+//     const popup = document.getElementById('popup1');
+//     popup.style.display = 'block';
+// }
+
+// function closePopup1() {
+//     const popup = document.getElementById('popup1');
+//     popup.style.display = 'none';
+// }
+
+// function openPopup2() {
+//     const popup = document.getElementById('popup2');
+//     popup.style.display = 'block';
+// }
+
+// function closePopup2() {
+//     const popup = document.getElementById('popup2');
+//     popup.style.display = 'none';
+// }
+// function openPopup1() {
+//     const popup = document.getElementById('popup1');
+//     popup.style.display = 'block';
+// }
+
+// function closePopup1() {
+//     const popup = document.getElementById('popup1');
+//     popup.style.display = 'none';
+// }
+
+// function openPopup2() {
+//     const popup = document.getElementById('popup2');
+//     popup.style.display = 'block';
+// }
+
+// function closePopup2() {
+//     const popup = document.getElementById('popup2');
+//     popup.style.display = 'none';
+// }
+// function openPopup1() {
+//     const popup = document.getElementById('popup1');
+//     popup.style.display = 'block';
+// }
+
+// function closePopup1() {
+//     const popup = document.getElementById('popup1');
+//     popup.style.display = 'none';
+// }
+
+// function openPopup2() {
+//     const popup = document.getElementById('popup2');
+//     popup.style.display = 'block';
+// }
+
+// function closePopup2() {
+//     const popup = document.getElementById('popup2');
+//     popup.style.display = 'none';
+// }
+// function openPopup1() {
+//     const popup = document.getElementById('popup1');
+//     popup.style.display = 'block';
+// }
+
+// function closePopup1() {
+//     const popup = document.getElementById('popup1');
+//     popup.style.display = 'none';
+// }
+
+// function openPopup2() {
+//     const popup = document.getElementById('popup2');
+//     popup.style.display = 'block';
+// }
+
+// function closePopup2() {
+//     const popup = document.getElementById('popup2');
+//     popup.style.display = 'none';
+// }
+
+// function openPopup2() {
+//     const popup = document.getElementById('popup2');
+//     popup.style.display = 'block';
+// }
+
+// function closePopup2() {
+//     const popup = document.getElementById('popup2');
+//     popup.style.display = 'none';
+// }
+// window.addEventListener('click', (event) => {
+//     // Close the pop-up if the user clicks outside the pop-up
+//     if (event.target.classList.contains('popup')) {
+//         event.target.style.display = 'none';
+//     }
+// });
+
+function PopupManager(specialtyNumber) {
+    this.openPopup = function () {
+        const popup = document.getElementById(`popup${specialtyNumber}`);
+        popup.style.display = 'block';
+    };
+
+    this.closePopup = function () {
+        const popup = document.getElementById(`popup${specialtyNumber}`);
+        popup.style.display = 'none';
+    };
+}
+
+const popupManagers = [];
+
+// Create PopupManager instances for specialties 1 to 9
+for (let i = 1; i <= 9; i++) {
+    popupManagers[i] = new PopupManager(i);
+}
+
+// Example event listeners for buttons
+for (let i = 1; i <= 9; i++) {
+    const button = document.getElementById(`button${i}`);
+    button.addEventListener('click', () => popupManagers[i].openPopup());
+}
+
+
+// Example usage
+// To open the pop-up for the first specialty
+// popupManagers[1].openPopup();
+
+// // To close the pop-up for the second specialty
+// popupManagers[2].closePopup();
